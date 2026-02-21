@@ -1,0 +1,136 @@
+.main-content {
+    width: 100%;
+    height: 100vh;
+    padding-left: 220px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.main-header {
+    padding: 28px 36px 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.main-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Home screen */
+.home-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding-bottom: 80px;
+}
+
+.home-logo {
+    font-size: 4rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #fff;
+    letter-spacing: -2px;
+}
+
+.home-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0;
+}
+
+/* Playlist header button */
+.add-all-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    padding: 8px 16px;
+    color: #fff;
+    font-size: 0.82rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-all-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.main-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.content-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 36px 100px;
+}
+
+/* Search */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    color: rgba(255, 255, 255, 0.35);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.search-input {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 9px 18px 9px 38px;
+    color: #fff;
+    font-size: 0.875rem;
+    font-family: inherit;
+    width: 220px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.search-input:focus {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Loading state during search */
+.content-scroll.searching {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Custom Scrollbar */
+.content-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+
+.content-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
